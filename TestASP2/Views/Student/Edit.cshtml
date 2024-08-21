@@ -1,0 +1,22 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="text-center">Edit student information</h1>
+<form method="POST" asp-controller="Student" asp-action="Edit">
+    <div >
+        <label asp-for="Name"></label>
+        <input asp-for="Name" type="text" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div> 
+    <div >
+        <label asp-for="Score"></label>
+        <input asp-for="Score" type="number" class="form-control"/>
+        <span asp-validation-for="Score" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary my-2">Save</button>
+</form>
+
+
+

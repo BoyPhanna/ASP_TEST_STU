@@ -1,0 +1,20 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Insert New Student</h1>
+<form method="POST" asp-controller="Student" asp-action="Create">
+    <div >
+        <label asp-for="Name"></label>
+        <input asp-for="Name" type="text" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div> 
+    <div >
+        <label asp-for="Score"></label>
+        <input asp-for="Score" type="number" class="form-control"/>
+        <span asp-validation-for="Score" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary my-2">Save</button>
+</form>
+
